@@ -19,7 +19,7 @@ def which(file):
 def njobs(name = ""):
     """ Wrapper around qstat - gets the total number of tasks with a given name or account """ 
     user = os.environ.get('USER')
-    ntasks = int(subprocess.check_output("condor_q -submitter aantipov | wc -l", shell=True))
+    ntasks = int(subprocess.check_output("condor_q -submitter " +os.environ["USER"] + " | wc -l", shell=True))
     return ntasks
 
 # Submit mpi job

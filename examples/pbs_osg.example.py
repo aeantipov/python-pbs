@@ -1,6 +1,5 @@
 # import pbs tools
 from pbs_osg import *
-account= "TG-DMR130036"
 
 print "Total number of jobs of current user =",njobs()
 print "njobs named test1 =",njobs("test1")
